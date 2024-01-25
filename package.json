@@ -1,0 +1,29 @@
+{
+  "name": "BehnamBashiriCV",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.1.0",
+    "@neneos/nuxt-animate.css": "0.0.1",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "aos": "^2.3.4",
+    "nuxt": "^2.0.0",
+    "rellax": "^1.12.1",
+    "vue-owl-carousel2": "^2.0.7",
+    "vue-scrollto": "^2.18.1",
+    "vue-typed-js": "^0.1.2",
+    "vue-waypoint": "^3.4.1",
+    "@nuxt/content": "^1.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.3"
+  }
+}
