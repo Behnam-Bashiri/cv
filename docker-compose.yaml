@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  nuxt-app:
+    build: .
+    container_name: nuxt
+    restart: unless-stopped
+    ports:
+      - 3500:3500
