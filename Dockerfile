@@ -1,21 +1,23 @@
-FROM node:21.0
+# Use a Node.js base image
+FROM node:14
 
+# Set the working directory
+WORKDIR /usr/src/app
 
-# create destination directory
-RUN mkdir -p /usr/src/nuxt-app
-WORKDIR /usr/src/nuxt-app
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-# copy the app, note .dockerignore
-COPY . /usr/src/nuxt-app/
-RUN node -v
-RUN npm install -g n   
-RUN n latest
+# Install dependencies
 RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Build the Nuxt.js application
 RUN npm run build
 
+# Expose the port your Nuxt app will run on
 EXPOSE 3000
 
-ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
-
-CMD [ "npm", "start" ]
+# Set the command to run your application
+CMD ["npm", "start"]
