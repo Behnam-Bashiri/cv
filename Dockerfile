@@ -1,5 +1,5 @@
 # Use a Node.js base image
-FROM node:14
+FROM node:20
 
 # Set the working directory
 WORKDIR /usr/src/app
@@ -9,14 +9,14 @@ COPY package*.json ./
 RUN node -v
 RUN npm install -g n   
 RUN n latest
-RUN npm install
+
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application code
 COPY . .
-
+RUN npm run generate
 # Build the Nuxt.js application
 RUN npm run build
 
