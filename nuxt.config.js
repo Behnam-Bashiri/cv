@@ -18,7 +18,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/icon.ico' }
     ]
   },
-
+  server: {
+    host: '0.0.0.0',
+    port: 3000 // default: 3000
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
   loadingIndicator: {
