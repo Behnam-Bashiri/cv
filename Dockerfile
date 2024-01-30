@@ -21,7 +21,7 @@ RUN npm run generate
 RUN npm run build
 
 # Expose the port your Nuxt app will run on
-EXPOSE 3000
+EXPOSE 80
 
 # Set the command to run your application
 CMD ["npm", "start"]
